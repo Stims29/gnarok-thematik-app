@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import { 
   ArrowPathIcon, 
   LockClosedIcon, 
@@ -175,9 +176,12 @@ function Demo() {
 
       {/* Call to Action */}
       <div className="mt-16 text-center">
-        <button className="bg-primary text-white px-8 py-3 rounded-lg text-lg font-semibold hover:bg-opacity-90 transition-colors">
+        <Link 
+          to="/try-demo"
+          className="inline-block bg-primary text-white px-8 py-3 rounded-lg text-lg font-semibold hover:bg-opacity-90 transition-colors"
+        >
           Try GnarokThematik Demo
-        </button>
+        </Link>
         <p className="mt-4 text-sm text-gray-600">
           No real TikTok authentication required for demo mode
         </p>

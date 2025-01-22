@@ -7,8 +7,8 @@ import Navbar from './components/Navbar';
 import Home from './pages/Home';
 import Dashboard from './pages/Dashboard';
 import Analysis from './pages/Analysis';
-import DemoInfo from './pages/DemoInfo';  // Ancien Demo.js renommé
-import DemoExperience from './pages/DemoExperience';  // Nouvelle expérience démo
+import Demo from './pages/Demo';  // La page d'information sur la démo
+import DemoExperience from './pages/DemoExperience';  // L'expérience démo interactive
 import AuthCallback from './pages/AuthCallback';
 
 function App() {
@@ -21,7 +21,7 @@ function App() {
             <main className="container mx-auto px-4 py-8">
               <Routes>
                 <Route path="/" element={<Home />} />
-                <Route path="/demo" element={<DemoInfo />} />
+                <Route path="/demo" element={<Demo />} />
                 <Route path="/try-demo/*" element={<DemoExperience />} />
                 <Route 
                   path="/dashboard" 

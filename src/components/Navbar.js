@@ -30,10 +30,10 @@ function Navbar() {
             
             {isDemo ? (
               <>
-                <Link to="/demo/dashboard" className="px-3 py-2 rounded-md hover:bg-gray-700">
+                <Link to="/try-demo/dashboard" className="px-3 py-2 rounded-md hover:bg-gray-700">
                   Demo Dashboard
                 </Link>
-                <Link to="/demo/analysis" className="px-3 py-2 rounded-md hover:bg-gray-700">
+                <Link to="/try-demo/analysis" className="px-3 py-2 rounded-md hover:bg-gray-700">
                   Demo Analysis
                 </Link>
               </>
@@ -53,7 +53,7 @@ function Navbar() {
                 </button>
               </>
             ) : (
-              !location.pathname.startsWith('/demo') && (
+              !location.pathname.startsWith('/try-demo') && (
                 <Link 
                   to="/demo" 
                   className="px-3 py-2 rounded-md hover:bg-gray-700 bg-primary"

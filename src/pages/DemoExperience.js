@@ -24,7 +24,7 @@ function DemoHome() {
         </div>
       </div>
       
-      <h1 className="text-3xl font-bold mb-8">GnarokThematik Demo</h1>
+      <h1 className="text-3xl font-bold mb-8">GnarokThematik Demo Experience</h1>
       
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
         <button
@@ -51,7 +51,7 @@ function DemoHome() {
   );
 }
 
-function Demo() {
+function DemoExperience() {
   const { setIsDemo } = useDemo();
 
   useEffect(() => {
@@ -68,4 +68,4 @@ function Demo() {
   );
 }
 
-export default Demo;
+export default DemoExperience;
