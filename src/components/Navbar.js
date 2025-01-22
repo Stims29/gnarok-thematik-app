@@ -26,6 +26,9 @@ function Navbar() {
             <Link to="/analysis" className="px-3 py-2 rounded-md hover:bg-gray-700">
               Analysis
             </Link>
+            <Link to="/demo" className="px-3 py-2 rounded-md hover:bg-gray-700 bg-primary">
+              Demo
+            </Link>
           </div>
         </div>
       </div>
