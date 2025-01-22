@@ -1,11 +1,10 @@
 import React from 'react';
 import { ChartBarIcon, LightBulbIcon, ArrowTrendingUpIcon } from '@heroicons/react/24/outline';
+import { useAuth } from '../contexts/AuthContext';
+import TikTokAuthButton from '../components/TikTokAuthButton';
 
 function Home() {
-  const handleTikTokLogin = () => {
-    // URL d'authentification TikTok à implémenter
-    console.log('TikTok login clicked');
-  };
+  const { user } = useAuth();
 
   const features = [
     {
@@ -38,12 +37,16 @@ function Home() {
         <p className="text-xl text-gray-600 mb-8 max-w-2xl mx-auto">
           Analyze your TikTok content and discover trending themes. Use data-driven insights to grow your audience and improve engagement.
         </p>
-        <button
-          onClick={handleTikTokLogin}
-          className="bg-primary text-white px-8 py-3 rounded-lg text-lg font-semibold hover:bg-opacity-90 transition-colors shadow-lg"
-        >
-          Connect with TikTok
-        </button>
+        {!user ? (
+          <TikTokAuthButton className="mx-auto" />
+        ) : (
+          <a
+            href="/dashboard"
+            className="inline-block bg-primary text-white px-8 py-3 rounded-lg text-lg font-semibold hover:bg-opacity-90 transition-colors shadow-lg"
+          >
+            Go to Dashboard
+          </a>
+        )}
       </div>
       
       {/* How It Works Section */}
@@ -91,12 +94,16 @@ function Home() {
         <p className="text-gray-600 mb-8">
           Join creators who are already using GnarokThematik to improve their content strategy.
         </p>
-        <button
-          onClick={handleTikTokLogin}
-          className="bg-primary text-white px-8 py-3 rounded-lg text-lg font-semibold hover:bg-opacity-90 transition-colors shadow-lg"
-        >
-          Start analyzing your content
-        </button>
+        {!user ? (
+          <TikTokAuthButton className="mx-auto" />
+        ) : (
+          <a
+            href="/analysis"
+            className="inline-block bg-primary text-white px-8 py-3 rounded-lg text-lg font-semibold hover:bg-opacity-90 transition-colors shadow-lg"
+          >
+            Start analyzing your content
+          </a>
+        )}
       </div>
     </div>
   );
